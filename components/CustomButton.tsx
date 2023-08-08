@@ -3,11 +3,11 @@
 import { ICustomButton } from '@/types'
 import React from 'react'
 
-const CustomButton = ({ title, containerStyles, handleClick }: ICustomButton) => {
+const CustomButton = ({ title, containerStyles, btnType ,handleClick }: ICustomButton) => {
   return (
     <button
         disabled={false}
-        type={"button"}
+        type={btnType || "button"}
         className={`custom-btn ${containerStyles}`}
         onClick={handleClick}
     >
