@@ -1,6 +1,17 @@
 import { CustomFilter, Hero, SearchBar } from '@/components'
+import { IHomeCarCatalogueFilter } from '@/types';
+import { fetchCars } from '@/utils';
 
-export default function Home() {
+export default async function Home({ searchParams }: IHomeCarCatalogueFilter) {
+
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 10,
+    model: searchParams.model || "",
+  });
+
   return (
     <main className='overflow-hidden'>
       <Hero />
