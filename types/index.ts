@@ -15,7 +15,7 @@ export interface ISearchManuFacturer {
     setManuFacturer: (manufacturer: string) => void;
 }
 
-  export interface IFilters {
+export interface IFilters {
     manufacturer?: string;
     year?: number;
     model?: string;
@@ -23,11 +23,11 @@ export interface ISearchManuFacturer {
     fuel?: string;
 }
   
-  export interface IHomeCarCatalogueFilter {
+export interface IHomeCarCatalogueFilter {
     searchParams: IFilters;
 }
 
-  export interface ICarDetails {
+export interface ICarDetails {
     city_mpg: number;
     class: string;
     combination_mpg: number;
@@ -42,7 +42,7 @@ export interface ISearchManuFacturer {
     year: number;
 }
 
-  export interface ICarCard {
+export interface ICarCard {
     model: string;
     make: string;
     mpg: number;
@@ -52,12 +52,17 @@ export interface ISearchManuFacturer {
     cityMPG: number;
 }
 
-  export interface ICustomFilterOptions {
+export interface ICustomFilterOptions {
     title: string;
     value: string;
 }
   
-  export interface ICustomFilter {
+export interface ICustomFilter {
     title: string;
     options: ICustomFilterOptions[];
+}
+
+export interface IShowMore {
+    pageNumber: number;
+    isNext: boolean;
 }
