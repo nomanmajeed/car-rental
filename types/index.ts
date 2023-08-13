@@ -13,7 +13,7 @@ export interface ICustomButton {
 export interface ISearchManuFacturer {
     manufacturer: string;
     setManuFacturer: (manufacturer: string) => void;
-  }
+}
 
   export interface IFilters {
     manufacturer?: string;
@@ -21,11 +21,11 @@ export interface ISearchManuFacturer {
     model?: string;
     limit?: number;
     fuel?: string;
-  }
+}
   
   export interface IHomeCarCatalogueFilter {
     searchParams: IFilters;
-  }
+}
 
   export interface ICarDetails {
     city_mpg: number;
@@ -40,7 +40,7 @@ export interface ISearchManuFacturer {
     model: string;
     transmission: string;
     year: number;
-  }
+}
 
   export interface ICarCard {
     model: string;
@@ -50,4 +50,14 @@ export interface ISearchManuFacturer {
     year: number;
     drive: string;
     cityMPG: number;
-  }
+}
+
+  export interface ICustomFilterOptions {
+    title: string;
+    value: string;
+}
+  
+  export interface ICustomFilter {
+    title: string;
+    options: ICustomFilterOptions[];
+}
